@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{68270614-BE02-4F33-9660-AFAD0F72FAF6}</ProjectGuid>
+    <RootNamespace>Gomoku2D</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)SFML-2.3.2\include;$(ProjectDir)include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration)\;$(ProjectDir)SFML-2.3.2\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-audio-d.lib;sfml-window-d.lib;sfml-system-d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)SFML-2.3.2\include;$(ProjectDir)include</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-audio-d.lib;sfml-window-d.lib;sfml-system-d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;$(ProjectDir)SFML-2.3.2\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)SFML-2.3.2\include;$(ProjectDir)include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration)\;$(ProjectDir)SFML-2.3.2\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-audio.lib;sfml-window.lib;sfml-system.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)SFML-2.3.2\include;$(ProjectDir)include</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-audio.lib;sfml-window.lib;sfml-system.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;$(ProjectDir)SFML-2.3.2\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AI\minMax\MinMax.cpp" />
+    <ClCompile Include="src\AI\monteCarlo\MonteCarlo.cpp" />
+    <ClCompile Include="src\AI\monteCarlo\MonteCarloHeuristic.cpp" />
+    <ClCompile Include="src\Graphic\Interface\Elements\ComplexElement.cpp" />
+    <ClCompile Include="src\Graphic\Interface\Elements\DropDownMenu.cpp" />
+    <ClCompile Include="src\referee\History.cpp" />
+    <ClCompile Include="src\Utils\ConvertTools.cpp" />
+    <ClCompile Include="src\Graphic\Interface\Elements\PrintableElement.cpp" />
+    <ClCompile Include="src\Graphic\Interface\OptionGUI.cpp" />
+    <ClCompile Include="src\Graphic\Interface\Elements\ButtonState.cpp" />
+    <ClCompile Include="src\Game\Player\IAPlayer.cpp" />
+    <ClCompile Include="src\Graphic\ResourceManager.cpp" />
+    <ClCompile Include="src\Graphic\Interface\Elements\Button.cpp" />
+    <ClCompile Include="src\Graphic\Interface\Elements\GuiElement.cpp" />
+    <ClCompile Include="src\Graphic\Interface\HomeGUI.cpp" />
+    <ClCompile Include="src\Graphic\Interface\SelectPlayGUI.cpp" />
+    <ClCompile Include="src\Graphic\Screen\WindowConfig.cpp" />
+    <ClCompile Include="src\Graphic\Screen\WindowSelectPlay.cpp" />
+    <ClCompile Include="src\Observer\Observable.cpp" />
+    <ClCompile Include="src\Game\Player\APlayer.cpp" />
+    <ClCompile Include="src\Graphic\Screen\AWindow.cpp" />
+    <ClCompile Include="src\Utils\Exception.cpp" />
+    <ClCompile Include="src\Game\GameController.cpp" />
+    <ClCompile Include="src\Graphic\Interface\GameGUI.cpp" />
+    <ClCompile Include="src\Game\Player\HumanPlayer.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Master.cpp" />
+    <ClCompile Include="src\Graphic\Interface\UserInterface.cpp" />
+    <ClCompile Include="src\Graphic\Screen\WindowGame.cpp" />
+    <ClCompile Include="src\Graphic\Screen\WindowHome.cpp" />
+    <ClCompile Include="src\Utils\IAManager.cpp" />
+    <ClCompile Include="src\Utils\RuleManager.cpp" />
+    <ClCompile Include="src\Utils\SoundMixer.cpp" />
+    <ClCompile Include="src\Utils\Task\GenericTask.cpp" />
+    <ClCompile Include="src\Utils\Task\TaskFactory.cpp" />
+    <ClCompile Include="src\Graphic\Screen\WindowOption.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Images\Game\about.png" />
+    <Image Include="Resources\Images\Game\aboutFlash.png" />
+    <Image Include="Resources\Images\Game\background.png" />
+    <Image Include="Resources\Images\Game\newGame.png" />
+    <Image Include="Resources\Images\Game\newGameFlash.png" />
+    <Image Include="Resources\Images\Game\pBlack.png" />
+    <Image Include="Resources\Images\Game\pBlack1.png" />
+    <Image Include="Resources\Images\Game\pBlackLum.png" />
+    <Image Include="Resources\Images\Game\pBlackLum1.png" />
+    <Image Include="Resources\Images\Game\pWhite.png" />
+    <Image Include="Resources\Images\Game\pWhite1.png" />
+    <Image Include="Resources\Images\Game\pWhiteLum.png" />
+    <Image Include="Resources\Images\Game\pWhiteLum1.png" />
+    <Image Include="Resources\Images\Game\redo.png" />
+    <Image Include="Resources\Images\Game\redoFlash.png" />
+    <Image Include="Resources\Images\Game\turnBlack.png" />
+    <Image Include="Resources\Images\Game\turnWhite.png" />
+    <Image Include="Resources\Images\Game\undo.png" />
+    <Image Include="Resources\Images\Game\undoFlash.png" />
+    <Image Include="Resources\Images\Home\background.png" />
+    <Image Include="Resources\Images\Home\button.png" />
+    <Image Include="Resources\Images\Home\buttonHallGame.png" />
+    <Image Include="Resources\Images\Home\buttonHallGameFlash.png" />
+    <Image Include="Resources\Images\Home\buttonHome.png" />
+    <Image Include="Resources\Images\Home\buttonHomeFlash.png" />
+    <Image Include="Resources\Images\Home\buttonMusic.png" />
+    <Image Include="Resources\Images\Home\buttonMusicFlash.png" />
+    <Image Include="Resources\Images\Home\buttonOption.png" />
+    <Image Include="Resources\Images\Home\buttonOptionFlash.png" />
+    <Image Include="Resources\Images\Home\buttonPlay.png" />
+    <Image Include="Resources\Images\Home\buttonPlayFlash.png" />
+    <Image Include="Resources\Images\Home\buttonSingleGame.png" />
+    <Image Include="Resources\Images\Home\buttonSingleGameFlash.png" />
+    <Image Include="Resources\Images\Home\choiceField.png" />
+    <Image Include="Resources\Images\Home\choiceFieldFlash.png" />
+    <Image Include="Resources\Images\Home\choiceOFF.png" />
+    <Image Include="Resources\Images\Home\choiceON.png" />
+    <Image Include="Resources\Images\Home\close.png" />
+    <Image Include="Resources\Images\Home\closeFlash.png" />
+    <Image Include="Resources\Images\Home\empty.png" />
+    <Image Include="Resources\Images\Home\emptyBackground.png" />
+    <Image Include="Resources\Images\Home\emptyButton.png" />
+    <Image Include="Resources\Images\Home\emptyButtonOFF.png" />
+    <Image Include="Resources\Images\Home\emptyButtonON.png" />
+    <Image Include="Resources\Images\Home\logo-kanji.png" />
+    <Image Include="Resources\Images\Home\menuDown.png" />
+    <Image Include="Resources\Images\Home\menuDownFlash.png" />
+    <Image Include="Resources\Images\Home\menuEmpty.png" />
+    <Image Include="Resources\Images\Home\menuEmpty2.png" />
+    <Image Include="Resources\Images\Home\soundOff.png" />
+    <Image Include="Resources\Images\Home\soundOn.png" />
+    <Image Include="Resources\Images\Home\title.png" />
+    <Image Include="Resources\Images\Home\versus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\AI\AI.hpp" />
+    <ClInclude Include="include\AI\IAI.hpp" />
+    <ClInclude Include="include\AI\minMax\MinMax.h" />
+    <ClInclude Include="include\AI\monteCarlo\MonteCarlo.h" />
+    <ClInclude Include="include\AI\monteCarlo\MonteCarloHeuristic.h" />
+    <ClInclude Include="include\Game\Player\IAPlayer.h" />
+    <ClInclude Include="include\Graphic\Interface\Elements\ComplexElement.h" />
+    <ClInclude Include="include\Graphic\Interface\Elements\DropDownMenu.h" />
+    <ClInclude Include="include\Graphic\ResourceManager.h" />
+    <ClInclude Include="include\Graphic\Interface\Elements\Button.h" />
+    <ClInclude Include="include\Graphic\Interface\Elements\ButtonState.h" />
+    <ClInclude Include="include\Graphic\Interface\Elements\GuiElement.h" />
+    <ClInclude Include="include\Graphic\Interface\Elements\PrintableElement.h" />
+    <ClInclude Include="include\Graphic\Interface\HomeGUI.h" />
+    <ClInclude Include="include\Graphic\Interface\OptionGUI.h" />
+    <ClInclude Include="include\Graphic\Interface\SelectPlayGUI.h" />
+    <ClInclude Include="include\Graphic\Interface\UserInterface.h" />
+    <ClInclude Include="include\Graphic\Screen\WindowConfig.h" />
+    <ClInclude Include="include\Graphic\Screen\WindowOption.h" />
+    <ClInclude Include="include\Graphic\Sfml.h" />
+    <ClInclude Include="include\map\Cell.h" />
+    <ClInclude Include="include\map\Grid.hpp" />
+    <ClInclude Include="include\map\ReadFile.h" />
+    <ClInclude Include="include\Observer\Observable.h" />
+    <ClInclude Include="include\referee\History.h" />
+    <ClInclude Include="include\referee\IReferee.hpp" />
+    <ClInclude Include="include\referee\Referee.hpp" />
+    <ClInclude Include="include\Utils\ConvertTools.h" />
+    <ClInclude Include="include\Utils\Exception.h" />
+    <ClInclude Include="include\Game\GameController.h" />
+    <ClInclude Include="include\Graphic\Interface\GameGUI.h" />
+    <ClInclude Include="include\Game\Player\HumanPlayer.h" />
+    <ClInclude Include="include\Game\Player\APlayer.h" />
+    <ClInclude Include="include\Graphic\Screen\AWindow.h" />
+    <ClInclude Include="include\Master.h" />
+    <ClInclude Include="include\Graphic\Screen\WindowGame.h" />
+    <ClInclude Include="include\Graphic\Screen\WindowHome.h" />
+    <ClInclude Include="include\Observer\Observer.h" />
+    <ClInclude Include="include\Utils\IAManager.h" />
+    <ClInclude Include="include\Utils\RuleManager.h" />
+    <ClInclude Include="include\Utils\SoundMixer.h" />
+    <ClInclude Include="include\Utils\Task\GenericTask.h" />
+    <ClInclude Include="include\Utils\Task\TaskFactory.h" />
+    <ClInclude Include="include\Utils\Tuple.h" />
+    <ClInclude Include="include\Graphic\Screen\WindowSelectPlay.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="openal32.dll" />
+    <None Include="sfml-audio-2.dll" />
+    <None Include="sfml-audio-d-2.dll" />
+    <None Include="sfml-graphics-2.dll" />
+    <None Include="sfml-graphics-d-2.dll" />
+    <None Include="sfml-network-2.dll" />
+    <None Include="sfml-network-d-2.dll" />
+    <None Include="sfml-system-2.dll" />
+    <None Include="sfml-system-d-2.dll" />
+    <None Include="sfml-window-2.dll" />
+    <None Include="sfml-window-d-2.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Resources\Fonts\katana.ttf" />
+    <Font Include="Resources\Fonts\lastninja.ttf" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
